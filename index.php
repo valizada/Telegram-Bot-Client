@@ -3,6 +3,7 @@ echo "hey";
 require('Logging.php');
 require('ParentClass.php');
 
+
 $log = new Logging();
 $parenClass = new ParentClass();
 // set path and name of log file (optional)
