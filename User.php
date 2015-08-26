@@ -1,4 +1,5 @@
 <?php
+
 /**
  * This object represents a Telegram user or bot.
  * Required parameters are: $id and $first_name.
@@ -8,8 +9,8 @@
  * Date: 26/08/15
  * Time: 09:46
  */
-
-class User {
+class User
+{
     private $id;
     private $first_name;
     private $last_name;
@@ -42,7 +43,7 @@ class User {
     }
 
     /**
-     * @param User‘s or bot’s first name
+     * @param User ‘s or bot’s first name
      */
     public function setFirstName($first_name)
     {
@@ -58,7 +59,7 @@ class User {
     }
 
     /**
-     * @param User‘s or bot’s last name
+     * @param User ‘s or bot’s last name
      */
     public function setLastName($last_name)
     {
@@ -74,7 +75,7 @@ class User {
     }
 
     /**
-     * @param User‘s or bot’s username
+     * @param User ‘s or bot’s username
      */
     public function setUserName($user_name)
     {

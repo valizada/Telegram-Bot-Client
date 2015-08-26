@@ -1,4 +1,5 @@
 <?php
+
 /**
  * This object represents a group chat.
  * Required parameters: $id and $title
@@ -6,8 +7,8 @@
  * Date: 26/08/15
  * Time: 09:54
  */
-
-class GroupChat {
+class GroupChat
+{
 
     private $id;
     private $title;

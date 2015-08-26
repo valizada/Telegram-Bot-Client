@@ -1,4 +1,5 @@
 <?php
+
 /**
  * This object represents a message.
  * Required params are: $message_id, $from, $date, $chat.
@@ -9,8 +10,8 @@
  * Date: 26/08/15
  * Time: 09:57
  */
-
-class Message {
+class Message
+{
 
     private $message_id;
     private $from;
