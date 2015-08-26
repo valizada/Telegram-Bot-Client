@@ -1,6 +1,7 @@
 <?php
 echo "hey";
 require('Logging.php');
+require('ParentClass.php');
 
 $log = new Logging();
 $parenClass = new ParentClass();
