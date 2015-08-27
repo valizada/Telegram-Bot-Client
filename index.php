@@ -46,4 +46,3 @@ class DemoApp
 
 $demo = new DemoApp();
 $demo->run();
-

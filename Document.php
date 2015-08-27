@@ -1,4 +1,5 @@
 <?php
+
 /**
  * This object represents a general file (as opposed to photos, voice messages and audio files).
  *
@@ -8,8 +9,8 @@
  * Date: 26/08/15
  * Time: 14:20
  */
-
-class Document {
+class Document
+{
     private $file_id;
     private $thumb;
     private $file_name;

@@ -1,4 +1,5 @@
 <?php
+
 /**
  * This object represent a user's profile pictures.
  *
@@ -7,8 +8,8 @@
  * Date: 26/08/15
  * Time: 14:21
  */
-
-class UserProfilePhotos {
+class UserProfilePhotos
+{
     private $total_count;
     private $photos;
 

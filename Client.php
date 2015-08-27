@@ -1,4 +1,5 @@
 <?php
+
 /**
  * This class will have all the methods needed
  * for the communication with the bot
@@ -6,62 +7,76 @@
  * Date: 27/08/15
  * Time: 17:48
  */
+class Client
+{
 
-class Client {
-
-    public function getMe(){
-
-    }
-
-    public function sendMessage(){
+    public function getMe()
+    {
 
     }
 
-    public function forwardMessage(){
+    public function sendMessage()
+    {
 
     }
 
-    public function sendPhoto(){
+    public function forwardMessage()
+    {
 
     }
 
-    public function sendAudio(){
+    public function sendPhoto()
+    {
 
     }
 
-    public function sendDocument(){
+    public function sendAudio()
+    {
 
     }
 
-    public function sendSticker(){
+    public function sendDocument()
+    {
 
     }
 
-    public function sendVideo(){
+    public function sendSticker()
+    {
 
     }
 
-    public function sendVoice(){
+    public function sendVideo()
+    {
 
     }
 
-    public function sendLocation(){
+    public function sendVoice()
+    {
 
     }
 
-    public function sendChatAction(){
+    public function sendLocation()
+    {
 
     }
 
-    public function getUserProfilePhotos(){
+    public function sendChatAction()
+    {
 
     }
 
-    public function getUpdates(){
+    public function getUserProfilePhotos()
+    {
 
     }
 
-    public function setWebhook(){
+    public function getUpdates()
+    {
+
+    }
+
+    public function setWebhook()
+    {
 
     }
 }

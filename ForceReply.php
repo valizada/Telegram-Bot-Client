@@ -1,4 +1,5 @@
 <?php
+
 /**
  * Upon receiving a message with this object, Telegram clients will display
  * a reply interface to the user (act as if the user has selected the bot‘s
@@ -9,8 +10,8 @@
  * Date: 26/08/15
  * Time: 14:22
  */
-
-class ForceReply {
+class ForceReply
+{
     private $force_reply;
     private $selective;
 

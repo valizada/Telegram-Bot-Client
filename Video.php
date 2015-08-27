@@ -1,4 +1,5 @@
 <?php
+
 /**
  * This object represents a video file.
  *
@@ -8,8 +9,8 @@
  * Date: 26/08/15
  * Time: 14:21
  */
-
-class Video {
+class Video
+{
     private $file_id;
     private $width;
     private $height;

@@ -1,4 +1,5 @@
 <?php
+
 /**
  * This object represents a sticker.
  *
@@ -8,8 +9,8 @@
  * Date: 26/08/15
  * Time: 14:20
  */
-
-class Sticker {
+class Sticker
+{
     private $file_id;
     private $width;
     private $height;

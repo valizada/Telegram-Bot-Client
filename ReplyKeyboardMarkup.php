@@ -1,4 +1,5 @@
 <?php
+
 /**
  * This object represents a custom keyboard with reply options
  * Required params: $keyboard.
@@ -8,8 +9,8 @@
  * Date: 26/08/15
  * Time: 14:22
  */
-
-class ReplyKeyboardMarkup {
+class ReplyKeyboardMarkup
+{
     private $keyboard;
     private $resize_keyboard;
     private $one_time_keyboard;

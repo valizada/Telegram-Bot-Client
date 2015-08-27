@@ -1,4 +1,5 @@
 <?php
+
 /**
  * Upon receiving a message with this object, Telegram clients will hide the current
  * custom keyboard and display the default letter-keyboard. By default, custom keyboards
@@ -9,8 +10,8 @@
  * Date: 26/08/15
  * Time: 14:22
  */
-
-class ReplyKeyboardHide {
+class ReplyKeyboardHide
+{
     private $hide_keyboard;
     private $selective;
 
@@ -32,7 +33,7 @@ class ReplyKeyboardHide {
     }
 
     /**
-     * @return 	Boolean	Optional. Use this parameter if you want to hide keyboard for specific users only.
+     * @return    Boolean    Optional. Use this parameter if you want to hide keyboard for specific users only.
      * Targets: 1) users that are @mentioned in the text of the Message object;
      * 2) if the bot's message is a reply (has reply_to_message_id), sender of the original message.
      * Example: A user votes in a poll, bot returns confirmation message in reply to the vote
