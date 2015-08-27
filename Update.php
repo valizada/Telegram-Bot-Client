@@ -37,7 +37,7 @@ class Update {
         $message->setDate($messageObject->date);
         // TODO: test it for User and GroupChat types
         $message->setChat($this->parseChat($messageObject->chat));
-        $message->setForwardFrom($this->parseUser($messageObject->forward_from));
+//        $message->setForwardFrom($this->parseUser($messageObject->forward_from));
 //
 //        $message->setForwardDate($messageObject->forward_date);
 //        // TODO: reply to message attribute
