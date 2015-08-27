@@ -21,19 +21,8 @@ require('Location.php');
 class Update {
 
     private $update_id;
-    //Typre of Message
+    //Type of Message
     private $message;
-
-    //Objcets of classes
-    private $groupChat;
-    private $audio;
-    private $document;
-    private $photoSize;
-    private $sticker;
-    private $video;
-    private $voice;
-    private $contact;
-    private $location;
 
     public function __construct($rawJson){
         $jsonObject = json_decode($rawJson);
@@ -46,10 +35,11 @@ class Update {
         $message->setMessageId($messageObject->message_id);
         $message->setFrom($this->parseUser($messageObject->from));
         $message->setDate($messageObject->date);
+        // TODO: test it for User and GroupChat types
         $message->setChat($this->parseChat($messageObject->chat));
         $message->setForwardFrom($this->parseUser($messageObject->forward_from));
         $message->setForwardDate($messageObject->forward_date);
-        //TODO: reply to message attribute
+        // TODO: reply to message attribute
         $message->setText($messageObject->text);
         $message->setAudio($this->parseAudio($messageObject->audio));
         $message->setDocument($this->parseDocument($messageObject->document));
@@ -64,7 +54,7 @@ class Update {
         $message->setLeftChatParticipant($this->parseUser($messageObject->left_chat_participant));
         $message->setNewChatTitle($messageObject->new_chat_title);
         $message->setNewChatPhoto($this->parsePhotoSize($messageObject->new_chat_photo));
-        //TODO: not sure about implementation of TRUE type
+        // TODO: not sure about implementation of TRUE type
         $message->setDeleteChatPhoto($messageObject->delete_chat_photo);
         $message->setGroupChatCreated($messageObject->group_chat_created);
 
@@ -85,6 +75,33 @@ class Update {
         return $user;
     }
 
+    public function parseChat($chatObject){
+        if(property_exists($chatObject, 'title')){
+            $groupChat = new GroupChat();
+            $groupChat->setId($chatObject->id);
+            $groupChat->setTitle($chatObject->title);
+            return $groupChat;
+        }
+
+        return $this->parseUser($chatObject);
+    }
+
+    public function parseAudio($audioObject){
+        $audio = new Audio();
+        $audio->setFileId($audioObject->file_id);
+        $audio->setDuration($audioObject->duration);
+
+        if(property_exists($audioObject, 'performer'))
+            $audio->setPerformer($audioObject->performer);
+        if(property_exists($audioObject, 'title'))
+            $audio->setTitle($audioObject->title);
+        if(property_exists($audioObject, 'mime_type'))
+            $audio->setMimeType($audioObject->mime_type);
+        if(property_exists($audioObject, 'file_size'))
+            $audio->setFileSize($audioObject->file_size);
+
+        return $audio;
+    }
     /**
      * @return mixed
      */

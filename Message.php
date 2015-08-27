@@ -12,7 +12,6 @@
  */
 class Message
 {
-
     private $message_id;
     private $from;
     private $date;
