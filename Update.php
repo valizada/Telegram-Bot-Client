@@ -38,25 +38,26 @@ class Update {
         // TODO: test it for User and GroupChat types
         $message->setChat($this->parseChat($messageObject->chat));
         $message->setForwardFrom($this->parseUser($messageObject->forward_from));
-        $message->setForwardDate($messageObject->forward_date);
-        // TODO: reply to message attribute
-        $message->setText($messageObject->text);
-        $message->setAudio($this->parseAudio($messageObject->audio));
-        $message->setDocument($this->parseDocument($messageObject->document));
-        $message->setPhoto($this->parsePhotoSize($messageObject->photo));
-        $message->setSticker($this->parseSticker($messageObject->sticker));
-        $message->setVideo($this->parseVideo($messageObject->video));
-        $message->setVoice($this->parseVoice($messageObject->voice));
-        $message->setCaption($messageObject->caption);
-        $message->setContact($this->parseContact($messageObject->contact));
-        $message->setLocation($this->parseLocation($messageObject->location));
-        $message->setNewChatParticipant($this->parseUser($messageObject->new_chat_participant));
-        $message->setLeftChatParticipant($this->parseUser($messageObject->left_chat_participant));
-        $message->setNewChatTitle($messageObject->new_chat_title);
-        $message->setNewChatPhoto($this->parsePhotoSize($messageObject->new_chat_photo));
-        // TODO: not sure about implementation of TRUE type
-        $message->setDeleteChatPhoto($messageObject->delete_chat_photo);
-        $message->setGroupChatCreated($messageObject->group_chat_created);
+//
+//        $message->setForwardDate($messageObject->forward_date);
+//        // TODO: reply to message attribute
+//        $message->setText($messageObject->text);
+//        $message->setAudio($this->parseAudio($messageObject->audio));
+//        $message->setDocument($this->parseDocument($messageObject->document));
+//        $message->setPhoto($this->parsePhotoSize($messageObject->photo));
+//        $message->setSticker($this->parseSticker($messageObject->sticker));
+//        $message->setVideo($this->parseVideo($messageObject->video));
+//        $message->setVoice($this->parseVoice($messageObject->voice));
+//        $message->setCaption($messageObject->caption);
+//        $message->setContact($this->parseContact($messageObject->contact));
+//        $message->setLocation($this->parseLocation($messageObject->location));
+//        $message->setNewChatParticipant($this->parseUser($messageObject->new_chat_participant));
+//        $message->setLeftChatParticipant($this->parseUser($messageObject->left_chat_participant));
+//        $message->setNewChatTitle($messageObject->new_chat_title);
+//        $message->setNewChatPhoto($this->parsePhotoSize($messageObject->new_chat_photo));
+//        // TODO: not sure about implementation of TRUE type
+//        $message->setDeleteChatPhoto($messageObject->delete_chat_photo);
+//        $message->setGroupChatCreated($messageObject->group_chat_created);
 
         return $message;
     }

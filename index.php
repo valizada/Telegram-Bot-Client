@@ -15,13 +15,12 @@ class DemoApp
         $log->lfile('log.txt');
         $json = file_get_contents('php://input');
         $log->lwrite("post: " . $json);
-        $json_decoded = json_decode($json);
 
-        $log->lwrite("\r\n");
+        $update = new Update($json);
 
-        $messageObject = $json_decoded->message;
-        $fromUserObject = $messageObject->from;
-        $userID = $fromUserObject->id;
+        $message = $update->getMessage();
+        $chat = $message->getChat();
+        $userID = $chat->getId();
 
         //API Url
         $url = $parenClass->getURL() . 'sendMessage';
