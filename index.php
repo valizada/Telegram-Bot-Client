@@ -1,16 +1,16 @@
 <?php
 echo "hey";
-require('Logging.php');
-require('ParentClass.php');
+require_once('Logging.php');
+require_once('ParentClass.php');
 
-require('Update.php');
+require_once('Update.php');
 
-class DemoApp
+class DemoApp extends ParentClass
 {
     public function run()
     {
         $log = new Logging();
-        $parenClass = new ParentClass();
+//        $parenClass = new ParentClass();
         // set path and name of log file (optional)
         $log->lfile('log.txt');
         $json = file_get_contents('php://input');
@@ -20,27 +20,15 @@ class DemoApp
 
         $message = $update->getMessage();
         $chat = $message->getChat();
-        $userID = $chat->getId();
+        $chat_id = $chat->getId();
+        $text = $message->getText();
+        $client = new Client();
 
-        //API Url
-        $url = $parenClass->getURL() . 'sendMessage';
+        $client->sendMessage($chat_id, $text, null, null, null);
+        $client->sendLocation($chat_id, 53.4667, 2.2333, null, null);
 
-        //Initiate cURL.
-        $ch = curl_init($url);
-
-        $jsonData = "chat_id=" . $userID . "&text=here";
-
-        //Tell cURL that we want to send a POST request.
-        curl_setopt($ch, CURLOPT_POST, 2);
-
-        //Attach our encoded JSON string to the POST fields.
-        curl_setopt($ch, CURLOPT_POSTFIELDS, $jsonData);
-
-        //Execute the request
-        $result = curl_exec($ch);
 
         $log->lclose();
-
     }
 }
 

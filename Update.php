@@ -142,7 +142,7 @@ class Update
         return $document;
     }
 
-    // TODO: photoSize is an array of 4 sizes,
+    // TODO: for photo will get 4 sizes(array of 4 photosizes),
     // which should be considered
     public function parsePhotoSize($photoSizeObject)
     {
