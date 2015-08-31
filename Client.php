@@ -17,6 +17,7 @@ class Client extends ParentClass
     public function __construct()
     {
         $this->log = new Logging();
+	$this->log->lfile('log.txt');
         $this->requestUrl = $this->getURL();
     }
 
@@ -62,7 +63,7 @@ class Client extends ParentClass
         $url = $this->requestUrl . "sendPhoto";
         $data = array(
             'chat_id' => urlencode($chat_id),
-            'photo' => urlencode($photo),
+            'photo' => '@'.$photo,
             'caption' => urlencode($caption),
             'reply_to_message_id' => urlencode($reply_to_message_id),
             'reply_markup' => urlencode($reply_markup)
@@ -200,26 +201,29 @@ class Client extends ParentClass
 
     private function curlMethod($url, $fields)
     {
-        $fields_string = "";
+        //$fields_string = "";
 
         //  url-ify the data for the POST
-        foreach ($fields as $key => $value) {
-            $fields_string .= $key . '=' . $value . '&';
-        }
-        rtrim($fields_string, '&');
+        //foreach ($fields as $key => $value) {
+        //    $fields_string .= $key . '=' . $value . '&';
+        //}
+        //rtrim($fields_string, '&');
 
         //  open connection
         $ch = curl_init();
-
+        //curl_setopt($ch, CURLOPT_HTTPHEADER, array('Content-type: multipart/form-data'));
         //  set the url
         curl_setopt($ch, CURLOPT_URL, $url);
         //  number of POST vars
         curl_setopt($ch, CURLOPT_POST, count($fields));
         //  POST data
-        curl_setopt($ch, CURLOPT_POSTFIELDS, $fields_string);
+        curl_setopt($ch, CURLOPT_POSTFIELDS, $fields);
+	//  To display result of curl
+	curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
 
         //  execute post
-        curl_exec($ch);
+        $result = curl_exec($ch);
+    	$this->log->lwrite("result curl: ".$result);
         //  close connection
         curl_close($ch);
     }

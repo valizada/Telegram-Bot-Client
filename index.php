@@ -26,7 +26,7 @@ class DemoApp extends ParentClass
 
         $client->sendMessage($chat_id, $text, null, null, null);
         $client->sendLocation($chat_id, 53.480759, -2.242631, null, null);
-
+        $client->sendPhoto($chat_id, 'pic.jpg', 'sweety', null, null);
 
         $log->lclose();
     }
