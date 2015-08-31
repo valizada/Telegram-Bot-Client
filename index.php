@@ -4,7 +4,7 @@ require_once('Logging.php');
 require_once('ParentClass.php');
 
 require_once('Update.php');
-
+require_once('Client.php');
 class DemoApp extends ParentClass
 {
     public function run()
@@ -25,7 +25,7 @@ class DemoApp extends ParentClass
         $client = new Client();
 
         $client->sendMessage($chat_id, $text, null, null, null);
-        $client->sendLocation($chat_id, 53.4667, 2.2333, null, null);
+        $client->sendLocation($chat_id, 53.480759, -2.242631, null, null);
 
 
         $log->lclose();

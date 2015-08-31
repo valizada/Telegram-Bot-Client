@@ -12,10 +12,12 @@ require_once('ParentClass.php');
 class Client extends ParentClass
 {
     private $requestUrl;
+    private $log;
 
     public function __construct()
     {
-        $this->$requestUrl = $this->getURL();
+        $this->log = new Logging();
+        $this->requestUrl = $this->getURL();
     }
 
     public function getMe()
@@ -30,6 +32,7 @@ class Client extends ParentClass
                                 $reply_to_message_id, $reply_markup)
     {
         $url = $this->requestUrl . "sendMessage";
+        $this->log->lwrite("url: " . $url);
         $data = array(
             'chat_id' => urlencode($chat_id),
             'text' => urlencode($text),
