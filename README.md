@@ -7,7 +7,7 @@ So that you can easily configure your Bot and customize it given your needs.
 
 # My bot
 
-His name is ***@FizBot***, feel free to talk to him,  he is very fun, but for now he is just learning to talk, will respond with a dummy text.
+His name is ***@FizBot***, feel free to talk to him,  he is very fun, for now he is just learning to talk, will repeat whatever you say, send you his location, and a picture of sweet kitten.
 
 
 # Usage
