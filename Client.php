@@ -17,7 +17,7 @@ class Client extends ParentClass
     public function __construct()
     {
         $this->log = new Logging();
-	$this->log->lfile('log.txt');
+        $this->log->lfile('log.txt');
         $this->requestUrl = $this->getURL();
     }
 
@@ -63,7 +63,7 @@ class Client extends ParentClass
         $url = $this->requestUrl . "sendPhoto";
         $data = array(
             'chat_id' => urlencode($chat_id),
-            'photo' => '@'.$photo,
+            'photo' => '@' . $photo,
             'caption' => urlencode($caption),
             'reply_to_message_id' => urlencode($reply_to_message_id),
             'reply_markup' => urlencode($reply_markup)
@@ -218,12 +218,13 @@ class Client extends ParentClass
         curl_setopt($ch, CURLOPT_POST, count($fields));
         //  POST data
         curl_setopt($ch, CURLOPT_POSTFIELDS, $fields);
-	//  To display result of curl
-	curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+        //  To display result of curl
+        curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
 
         //  execute post
         $result = curl_exec($ch);
-    	$this->log->lwrite("result curl: ".$result);
+        $this->log->lwrite("result curl: " . $result);
+        echo $result."\n";
         //  close connection
         curl_close($ch);
     }
