@@ -192,7 +192,7 @@ class Client extends ParentClass
     {
         $requestUrl = $this->requestUrl . "setWebhook";
         $data = array(
-            'url' => urlencode($url),
+            'url' => $url,
             'certificate' => urlencode($certificate)
         );
 
