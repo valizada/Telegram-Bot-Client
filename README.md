@@ -31,3 +31,7 @@ php webhook.php https://www.example.com/<token>
 
 [Telegram Bot Webhook]:https://core.telegram.org/bots/api#setwebhook
 [link]:https://core.telegram.org/bots#generate-an-authorization-token-for-your-bot
+
+
+[![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/valizada/telegram-bot-client/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
+
