@@ -10,7 +10,7 @@
 class ParentClass
 {
 
-    private $URL = "https://api.telegram.org/YOUR_TOKEN_GOES_HERE/";
+    private $URL = "https://api.telegram.org/botYOUR_TOKEN_GOES_HERE/";
 
     /**
      * @return mixed
