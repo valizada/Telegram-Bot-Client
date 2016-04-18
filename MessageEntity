@@ -1,1 +1,79 @@
 
+<?php
+/**
+ * This object represents a Telegram user or bot.
+ * Required parameters are: $id and $first_name.
+ * Optionals: $last_name and $username
+ *
+ * User: valizada
+ * Date: 18/04/16
+ * Time: 01:01
+ */
+ 
+class MessageEntity
+{
+    private $type;
+    private $offset;
+    private $length;
+    private $url;
+    /**
+     * @return
+     * Type of the entity. One of mention (@username), hashtag, bot_command, 
+     * url, email, bold (bold text), italic (italic text), code (monowidth string),
+     * pre (monowidth block), text_link (for clickable text URLs)
+     */
+    public function getType()
+    {
+        return $this->id;
+    }
+    /**
+     * @param
+     * Type of the entity
+     */
+    public function setType($type)
+    {
+        $this->type = $type;
+    }
+    /**
+     * @return Integer	Offset in UTF-16 code units to the start of the entity
+     */
+    public function getOffset()
+    {
+        return $this->offset;
+    }
+    /**
+     * @param Integer	Offset in UTF-16 code units to the start of the entity
+     */
+    public function setOffset($offset)
+    {
+        $this->offset = $offset;
+    }
+    /**
+     * @return Integer	Length of the entity in UTF-16 code units
+     */
+    public function getLength()
+    {
+        return $this->length;
+    }
+    /**
+     * @param Integer	Length of the entity in UTF-16 code units
+     */
+    public function setLength($length)
+    {
+        $this->length = $length;
+    }
+    /**
+     * @return String	Optional. For “text_link” only, url that will be opened after user taps on the text
+     */
+    public function getUrl()
+    {
+        return $this->url;
+    }
+    /**
+     * @param String	Optional. For “text_link” only, url that will be opened after user taps on the text
+     */
+    public function setUrl($url)
+    {
+        $this->url = $url;
+    }
+}
