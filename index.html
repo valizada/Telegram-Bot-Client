@@ -1,26 +1,35 @@
 <!DOCTYPE html>
-<html lang="en-us">
+<html>
   <head>
-    <meta charset="UTF-8">
-    <title>Telegram-bot-client by valizada</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" href="stylesheets/normalize.css" media="screen">
-    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link href='https://fonts.googleapis.com/css?family=Architects+Daughter' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
     <link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen">
-  </head>
-  <body>
-    <section class="page-header">
-      <h1 class="project-name">Telegram-bot-client</h1>
-      <h2 class="project-tagline">Bot Client which is going to follow rules set by Telegram&#39;s BotFather :))</h2>
-      <a href="https://github.com/valizada/Telegram-Bot-Client" class="btn">View on GitHub</a>
-      <a href="https://github.com/valizada/Telegram-Bot-Client/zipball/master" class="btn">Download .zip</a>
-      <a href="https://github.com/valizada/Telegram-Bot-Client/tarball/master" class="btn">Download .tar.gz</a>
-    </section>
+    <link rel="stylesheet" type="text/css" href="stylesheets/print.css" media="print">
 
-    <section class="main-content">
-      <h1>
-<a id="telegram-bot-client" class="anchor" href="#telegram-bot-client" aria-hidden="true"><span class="octicon octicon-link"></span></a>Telegram-Bot-Client</h1>
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <title>Telegram-bot-client by valizada</title>
+  </head>
+
+  <body>
+    <header>
+      <div class="inner">
+        <h1>Telegram-bot-client</h1>
+        <h2>Bot Client which is going to follow rules set by Telegram&#39;s BotFather :))</h2>
+        <a href="https://github.com/valizada/Telegram-Bot-Client" class="button"><small>View project on</small> GitHub</a>
+      </div>
+    </header>
+
+    <div id="content-wrapper">
+      <div class="inner clearfix">
+        <section id="main-content">
+          <h1>
+<a id="telegram-bot-client" class="anchor" href="#telegram-bot-client" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Telegram-Bot-Client</h1>
 
 <p>Bot Client which is going to follow rules set by Telegram's BotFather :))</p>
 
@@ -28,12 +37,12 @@
 So that you can easily configure your Bot and customize it given your needs.</p>
 
 <h1>
-<a id="my-bot" class="anchor" href="#my-bot" aria-hidden="true"><span class="octicon octicon-link"></span></a>My bot</h1>
+<a id="my-bot" class="anchor" href="#my-bot" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>My bot</h1>
 
 <p>His name is <strong><em>@FizBot</em></strong>, feel free to talk to him,  he is very fun, for now he is just learning to talk, will repeat whatever you say, send you his location, and a picture of sweet kitten.</p>
 
 <h1>
-<a id="how-to-install-and-use" class="anchor" href="#how-to-install-and-use" aria-hidden="true"><span class="octicon octicon-link"></span></a>How to install and use</h1>
+<a id="how-to-install-and-use" class="anchor" href="#how-to-install-and-use" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>How to install and use</h1>
 
 <p>Clone the repository</p>
 
@@ -42,7 +51,7 @@ So that you can easily configure your Bot and customize it given your needs.</p>
 
 <p>Generate Telegram Bot Token by following instructions given in this <strong><a href="https://core.telegram.org/bots#generate-an-authorization-token-for-your-bot">link</a></strong></p>
 
-<p>Edit following line:  <em>private $URL = "<a href="https://api.telegram.org/YOUR_TOKEN_GOES_HERE/">https://api.telegram.org/YOUR_TOKEN_GOES_HERE/</a>";</em> in the ParentClass.php file, and include your own token gotten from Telegram.</p>
+<p>Edit following line:  <em>private $URL = "<a href="https://api.telegram.org/botYOUR_TOKEN_GOES_HERE/">https://api.telegram.org/botYOUR_TOKEN_GOES_HERE/</a>";</em> in the ParentClass.php file, and include your own token gotten from Telegram.</p>
 
 <p>Then, you should create a webhook for listening to the incoming updates from Telegram(more about <strong><a href="https://core.telegram.org/bots/api#setwebhook">Telegram Bot Webhook</a></strong>)
 Run the following command, by specifying a url to receive incoming updates via an outgoing webhook.</p>
@@ -53,14 +62,24 @@ Run the following command, by specifying a url to receive incoming updates via a
 </code></pre>
 
 <p><a href="https://bitdeli.com/free" title="Bitdeli Badge"><img src="https://d2weczhvl823v0.cloudfront.net/valizada/telegram-bot-client/trend.png" alt="Bitdeli Badge"></a></p>
+        </section>
 
-      <footer class="site-footer">
-        <span class="site-footer-owner"><a href="https://github.com/valizada/Telegram-Bot-Client">Telegram-bot-client</a> is maintained by <a href="https://github.com/valizada">valizada</a>.</span>
+        <aside id="sidebar">
+          <a href="https://github.com/valizada/Telegram-Bot-Client/zipball/master" class="button">
+            <small>Download</small>
+            .zip file
+          </a>
+          <a href="https://github.com/valizada/Telegram-Bot-Client/tarball/master" class="button">
+            <small>Download</small>
+            .tar.gz file
+          </a>
 
-        <span class="site-footer-credits">This page was generated by <a href="https://pages.github.com">GitHub Pages</a> using the <a href="https://github.com/jasonlong/cayman-theme">Cayman theme</a> by <a href="https://twitter.com/jasonlong">Jason Long</a>.</span>
-      </footer>
+          <p class="repo-owner"><a href="https://github.com/valizada/Telegram-Bot-Client"></a> is maintained by <a href="https://github.com/valizada">valizada</a>.</p>
 
-    </section>
+          <p>This page was generated by <a href="https://pages.github.com">GitHub Pages</a> using the Architect theme by <a href="https://twitter.com/jasonlong">Jason Long</a>.</p>
+        </aside>
+      </div>
+    </div>
 
             <script type="text/javascript">
             var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
