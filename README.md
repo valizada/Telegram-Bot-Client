@@ -18,7 +18,7 @@ git clone git@github.com:valizada/Telegram-Bot-Client.git
 ```
 Generate Telegram Bot Token by following instructions given in this **[link]**
 
-Edit following line:  *private $URL = "https://api.telegram.org/YOUR_TOKEN_GOES_HERE/";* in the ParentClass.php file, and include your own token gotten from Telegram.
+Edit following line:  *private $URL = "https://api.telegram.org/botYOUR_TOKEN_GOES_HERE/";* in the ParentClass.php file, and include your own token gotten from Telegram.
 
 
 Then, you should create a webhook for listening to the incoming updates from Telegram(more about **[Telegram Bot Webhook]**)
