@@ -1,0 +1,19 @@
+{
+    "name": "valizada/Telegram-Bot-Client",
+    "type": "library",
+    "description": "Bot Client which is going to follow rules set by Telegram's BotFather :))",
+    "keywords": ["telegram","bot", "botfather", "telegram-bot"],
+    "homepage": "https://github.com/valizada/Telegram-Bot-Client",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Fizuli Valizada",
+            "email": "fizuli@valizada.com",
+            "homepage": "https://valizada.com",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": ">=5.3.0"
+    }
+}
