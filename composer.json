@@ -1,5 +1,5 @@
 {
-    "name": "valizada/Telegram-Bot-Client",
+    "name": "valizada/telegram-bot-client",
     "type": "library",
     "description": "Bot Client which is going to follow rules set by Telegram's BotFather :))",
     "keywords": ["telegram","bot", "botfather", "telegram-bot"],
