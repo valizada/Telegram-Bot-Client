@@ -13,7 +13,10 @@ His name is ***@FizBot***, feel free to talk to him,  he is very fun, for now he
 # How to install and use
 
 1. Using Composer
+  ```
   composer create-project valizada/telegram-bot-client
+  ```
+  
   If you do not have composer, then follow this **[get composer]**) link 
 2. Clone the repository
 ```
